@@ -1,0 +1,606 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B9ED61F-62D6-47C1-9093-0472B82A11C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppSalaMaya</RootNamespace>
+    <AssemblyName>AppSalaMaya</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="GeneradorDeArchivos.cs" />
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Bienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\Bienvenida.Designer.cs">
+      <DependentUpon>Bienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Codices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\Codices.Designer.cs">
+      <DependentUpon>Codices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\IngresarCredenciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\IngresarCredenciales.Designer.cs">
+      <DependentUpon>IngresarCredenciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Maya.cs" />
+    <Compile Include="Scripts\MAYA_O_NO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\MAYA_O_NO.Designer.cs">
+      <DependentUpon>MAYA_O_NO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\MessageBoxDios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\MessageBoxDios.Designer.cs">
+      <DependentUpon>MessageBoxDios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\QuizDios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\QuizDios.Designer.cs">
+      <DependentUpon>QuizDios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\Registrar.Designer.cs">
+      <DependentUpon>Registrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Resultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\Resultados.Designer.cs">
+      <DependentUpon>Resultados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\Score.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\Score.Designer.cs">
+      <DependentUpon>Score.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\TimeLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\TimeLine.Designer.cs">
+      <DependentUpon>TimeLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scripts\TimerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripts\TimerDialog.Designer.cs">
+      <DependentUpon>TimerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Scripts\Bienvenida.resx">
+      <DependentUpon>Bienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\Codices.resx">
+      <DependentUpon>Codices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\IngresarCredenciales.resx">
+      <DependentUpon>IngresarCredenciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\MAYA_O_NO.resx">
+      <DependentUpon>MAYA_O_NO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\MessageBoxDios.resx">
+      <DependentUpon>MessageBoxDios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\QuizDios.resx">
+      <DependentUpon>QuizDios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\Registrar.resx">
+      <DependentUpon>Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\Resultados.resx">
+      <DependentUpon>Resultados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\Score.resx">
+      <DependentUpon>Score.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\TimeLine.resx">
+      <DependentUpon>TimeLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\TimerDialog.resx">
+      <DependentUpon>TimerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logInBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_e1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_e2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_e3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_e4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aj1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aj2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aj3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajmaq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajmaq1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajmaq2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajpu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajpu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajpu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\akabal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\akabal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\akabal2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batz1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batz2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batz3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imox1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imox2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imox3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iq1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ix1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ix2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kame1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kawoq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kawoq1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kawoq2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kej.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kej1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kej2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noj1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noj2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noj3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\num13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qanel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qanel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tijax.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tijax1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tijax2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tijax3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toj1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toj2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tzi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tzi1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tzikin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tzikin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tzikin2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resaltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maya_pattern_Codice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chaac.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\itzamna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ixchel.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kauil.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kukulcan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnGlifos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnLinea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnDioses.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnPiezas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnPiezas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arroba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoMuseo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piramide.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
